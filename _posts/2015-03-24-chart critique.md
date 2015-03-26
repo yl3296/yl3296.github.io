@@ -18,6 +18,9 @@ Here should be the original chart
 
 # Here comes my improve:
 1. Rearrange the color range to 1)include all the rate value; 2) every range has rates fell in it.  I use the most recent data set for Jan 2015 to plot by ggplot. 
+
+![map_rplot](https://cloud.githubusercontent.com/assets/10662777/6846640/2eb61268-d396-11e4-928b-97de8ded807d.png)
+
  Here 's the R code:
 ```
 library(XML);
@@ -49,6 +52,8 @@ p0 + ggtitle("Unemployment Rate (July 2014)") + geom_polygon(aes(fill = cut_numb
 2. Make a bar chart in increasing order to have a clear mind of rate in different state. It's pretty important when we want to compare states. By this, we can easily read the lowest and highest unemployment rate. 
 
 Here comes my barchart.
+![bar](https://cloud.githubusercontent.com/assets/10662777/6846672/63943c26-d396-11e4-99da-41e6c85ac9bf.png)
+
 Bar chart is always a good way to show comparation between classes. 
 
 
