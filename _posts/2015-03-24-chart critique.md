@@ -68,7 +68,7 @@ Here comes my barchart.
 3. Heatmap is easily to plot in gplot, D3 and Excel.
 4. I tried making one more kind of heatmap. It works but still confusing about some of the missing label...
 
-![dist](https://cloud.githubusercontent.com/assets/10662777/6850807/c4c5eac4-d3b1-11e4-9658-6514623dff76.png)
+![treemap](https://cloud.githubusercontent.com/assets/10662777/6853376/41a290b0-d3c1-11e4-80ae-34f2958c30a1.jpg)
 
 
 
