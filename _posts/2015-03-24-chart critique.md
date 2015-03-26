@@ -2,7 +2,7 @@
 layout: post
 title: Bad Chart Critique
 ---
-####Introduction
+####My Bad Chart
 This map was published by the Bureau of Labor Statistics (BLS), and used in a recent article in Vox. Vox took this map an dget the conclusion that Mississippi has the worst unemployment rate. 
 Source: http://www.vox.com/2014/8/18/6032965/mississippi-unemployment-highest-state
 The following analysis is based on dataset on BLS: http://www.bls.gov/web/laus/laumstrk.htm
@@ -10,13 +10,14 @@ The following analysis is based on dataset on BLS: http://www.bls.gov/web/laus/l
 Here should be the original chart
 ![badchart](https://cloud.githubusercontent.com/assets/10662777/6846631/0c197038-d396-11e4-9c60-e0fdc9555562.gif)
 
-*Here comes my critique:
+####What's the problem? 
+
 1. One state in black,purple and dark brown and only one state in red. The range is unreasonable then.Three lable is useless and the remaining 4 lable is not clear enough to give a distribution of the rate.
 2. Map is good to give a statebased picture, but not accurate when we need to compare different states.
 3. The conclusion that Mississippi is the worst can not be get. Search the dataset, we find hte worst rate is Puerto Rico's 13.1%. But both BLS and Vox omitted it in the graph.
 
 
-*Here comes my improve:
+####How to improve it?
 1. Rearrange the color range to 1)include all the rate value; 2) every range has rates fell in it.  I use the most recent data set for Jan 2015 to plot by ggplot. 
 
 ![map_rplot](https://cloud.githubusercontent.com/assets/10662777/6846640/2eb61268-d396-11e4-928b-97de8ded807d.png)
@@ -56,9 +57,6 @@ Here comes my barchart.
 
 Bar chart is always a good way to show comparation between classes. 
 
+####Some thoughts
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below :point_down:).
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
