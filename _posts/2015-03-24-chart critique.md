@@ -8,6 +8,7 @@ Source: http://www.vox.com/2014/8/18/6032965/mississippi-unemployment-highest-st
 The following analysis is based on dataset on BLS: http://www.bls.gov/web/laus/laumstrk.htm
 
 Here should be the original chart
+![badchart](https://cloud.githubusercontent.com/assets/10662777/6846631/0c197038-d396-11e4-9c60-e0fdc9555562.gif)
 
 # Here comes my critique:
 1. One state in black,purple and dark brown and only one state in red. The range is unreasonable then.Three lable is useless and the remaining 4 lable is not clear enough to give a distribution of the rate.
