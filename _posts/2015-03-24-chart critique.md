@@ -66,7 +66,7 @@ Here comes my barchart.
 1. Bar chart is an excellent tool to see the maximum, minimum and compare any several classes. It still works when the number of classes is getting large. Just a little less cute.
 2. Heatmap shows its priority with large number of classes. But not so good in comparing.
 3. Heatmap is easily to plot in gplot, D3 and Excel.
-4. I tried making one more kind of heatmap. It works but still confusing about some of the missing label...
+4. I tried making one more kind of heatmap. It also works good to tell the rate distritbution.
 
 ![treemap](https://cloud.githubusercontent.com/assets/10662777/6853376/41a290b0-d3c1-11e4-80ae-34f2958c30a1.jpg)
 
