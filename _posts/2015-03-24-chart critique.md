@@ -65,7 +65,7 @@ Bar chart is always a good way to show comparation between classes.
 2. Heatmap shows its priority with large number of classes. But not so good in comparing.
 3. Heatmap is easily to plot in gplot, D3 and Excel.
 4. I tried making one more kind of heatmap. It works but still confusing about some of the missing label...
-![distribution](https://cloud.githubusercontent.com/assets/10662777/6850765/75804b9e-d3b1-11e4-9a65-e78baf1ec237.png)
+![dist](https://cloud.githubusercontent.com/assets/10662777/6850807/c4c5eac4-d3b1-11e4-9658-6514623dff76.png)
 
 
 
