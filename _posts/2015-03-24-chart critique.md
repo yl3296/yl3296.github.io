@@ -15,9 +15,9 @@ Here's the original chart
 
 ####What's the problem? 
 
-1. Three colour of legend do not show up at all and seems one state is in red.Obviosly, the range is unreasonable. Three lable is useless and the remaining four lable is not clear enough to give a distribution of the rate.
-2. Map is good to give a state based picture, but not accurate when we need to compare different states.In this article, the autho aims to know the highest unemployment rate. Generally, we can not get this informaiton by a heatmap only.
-3. Look at the dataset. Wee find Mississippi is not the worst one. Both BLS and Vox omitted the Puerto Rico,  which has the highest unemployment rate 13.1%. Then the conclusion is of course wrong.
+1. Three colour of legend do not show up at all and one state is in red. Obviosly, the range is unreasonable. Three lables are useless and the remaining four lables are not clear enough to give a distribution of the rate.
+2. Map is good to give a state based picture, but not accurate when we need to compare different states.In this article, the author aimed to know the highest unemployment rate. Generally, we can not get this informaiton by a heatmap.
+3. Look at the dataset. We find Mississippi is not the worst one. Both BLS and Vox omitted the Puerto Rico,  which has the highest unemployment rate 13.1%. Then the conclusion is of course wrong.
 ![image](https://cloud.githubusercontent.com/assets/10662777/6850372/30908190-d3af-11e4-8483-a772997f75a7.png)
 
 
@@ -65,7 +65,7 @@ Here comes my barchart.
 ####Some thoughts
 1. Bar chart is an excellent tool to see the maximum, minimum and compare any several classes. It still works when the number of classes is getting large. Just a little less cute.
 2. Heatmap shows its priority with large number of classes. But not so good in comparing.
-3. Heatmap is easily to plot in gplot, D3 and Excel.
+3. Heatmap is easily to plot in ggplot, D3 and Excel.
 4. I tried making one more kind of heatmap. It also works good to tell the rate distritbution.
 
 ![treemap](https://cloud.githubusercontent.com/assets/10662777/6853376/41a290b0-d3c1-11e4-80ae-34f2958c30a1.jpg)
