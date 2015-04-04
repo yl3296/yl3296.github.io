@@ -10,6 +10,7 @@ This article presents a critique of heatmap, a chart type commonly used to displ
 Basically, heat maps allow users to understand and analyze complex data sets with large number of classes. There can be many ways to display heatmaps, but they all share one thing in common -- they use color to communicate relationships between data values that would be would be much harder to understand if presented numerically in a spreadsheet.
 
 ####My Bad Chart
+![image7](https://cloud.githubusercontent.com/assets/10662777/6994620/83f133ca-daee-11e4-9e9d-d95952a2ba21.jpg)
 This map was published by the Bureau of Labor Statistics (BLS), and used in a recent article in Vox. Vox took this map and get the conclusion that Mississippi has the highest unemployment rate. 
 Source: http://www.vox.com/2014/8/18/6032965/mississippi-unemployment-highest-state
 The following analysis is based on dataset on BLS: http://www.bls.gov/web/laus/laumstrk.htm
@@ -28,6 +29,8 @@ Here's the original chart
 
 
 ####Let's improve it
+![image8](https://cloud.githubusercontent.com/assets/10662777/6994621/8d0c0336-daee-11e4-92fc-3edb09b43ade.jpg)
+
 1. Reset the color range: 1)include all the rate value; 2) every range has values fell in it.  
 Then I use the most recent data set in Jan 2015 to improve by ggplot. 
 ![map_rplot](https://cloud.githubusercontent.com/assets/10662777/6846640/2eb61268-d396-11e4-928b-97de8ded807d.png)
