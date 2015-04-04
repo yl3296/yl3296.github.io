@@ -17,6 +17,7 @@ The following analysis is based on dataset on BLS: http://www.bls.gov/web/laus/l
 
 Here's the original chart
 ![badchart](https://cloud.githubusercontent.com/assets/10662777/6846631/0c197038-d396-11e4-9c60-e0fdc9555562.gif)
+![iamge3](https://cloud.githubusercontent.com/assets/10662777/6994617/63cdc11c-daee-11e4-8b0d-846925396713.jpg)
 
 #####What's the problem? 
 
