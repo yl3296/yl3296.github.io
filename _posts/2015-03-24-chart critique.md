@@ -78,5 +78,8 @@ Here comes my barchart.
 
 ![treemap](https://cloud.githubusercontent.com/assets/10662777/6853376/41a290b0-d3c1-11e4-80ae-34f2958c30a1.jpg)
 
+![image2](https://cloud.githubusercontent.com/assets/10662777/6994626/af2cde22-daee-11e4-81d6-5084bb82a61f.png)
+
+
 
 
