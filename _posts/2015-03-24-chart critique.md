@@ -2,9 +2,9 @@
 ---
 layout: post
 title: Bad Chart Critique
-![iamge3](https://cloud.githubusercontent.com/assets/10662777/6994617/63cdc11c-daee-11e4-8b0d-846925396713.jpg =100*20)
+![iamge3](https://cloud.githubusercontent.com/assets/10662777/6994617/63cdc11c-daee-11e4-8b0d-846925396713.jpg width="200" height="200")
 ---
-
+<img src="http://....jpg" width="200" height="200" />
 
 ####Introduction
 This article presents a critique of heatmap, a chart type commonly used to display value by colours,highlighting how they are poorly designed to effectively communicate in the underlying data, and presents a number of more effective alternatives.
