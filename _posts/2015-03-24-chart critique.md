@@ -31,40 +31,67 @@ Here's the original chart
 
 1. Reset the color range: 1)include all the rate value; 2) every range has values fell in it.  
 Then I use the most recent data set in Jan 2015 to improve by ggplot. 
-![map_rplot](https://cloud.githubusercontent.com/assets/10662777/6846640/2eb61268-d396-11e4-928b-97de8ded807d.png)
+![rplotmap](https://cloud.githubusercontent.com/assets/10662777/7014656/a10ac9f0-dc95-11e4-9fc0-f6efc9b1dbfe.png)
 
 Here 's the R code:
 
 ```
-library(XML);
-library(ggplot2);
-library(maps);
-library(plyr);
 
-# read the data from the bls website with correct column formats
-unemp = readHTMLTable('http://www.bls.gov/web/laus/laumstrk.htm', colClasses = c('character', 'character', 'numeric'))[[2]];
 
-# rename columns and convert region to lowercase
-names(unemp) = c('rank', 'region', 'rate');
-unemp$region  = tolower(unemp$region);
 
-# get us state map data and merge with unemp
-us_state_map = map_data('state');
-map_data = merge(unemp, us_state_map, by = 'region'); 
+library(ggplot2)
+library(scales)
+library(maps)
 
-# keep data sorted by polygon order
-map_data = arrange(map_data, order);
+unemp <- read.csv("/Users/ClaireL/Documents/W4701Visual/Blogcritique/unemployment2015.csv", header = F, stringsAsFactors = F)
+names(unemp) <- c("id", "state_fips", "county_fips", "name", "year", 
+                  "?", "?", "?", "rate")
+unemp$county <- tolower(gsub(" County, [A-Z]{2}", "", unemp$name))
+unemp$state <- gsub("^.*([A-Z]{2}).*$", "\\1", unemp$name)
 
-# plot map using ggplot2
+county_df <- map_data("county")
+names(county_df) <- c("long", "lat", "group", "order", "state_name", "county")
+county_df$state <- state.abb[match(county_df$state_name, tolower(state.name))]
+county_df$state_name <- NULL
 
-p0 = ggplot(map_data, aes(x = long, y = lat, group = group)) 
-p0 + ggtitle("Unemployment Rate (July 2014)") + geom_polygon(aes(fill = cut_number(rate, 5))) +geom_path(colour = 'grey', linestyle = 2)+coord_map()+scale_colour_brewer(palette='Set1')+ scale_fill_hue(l=80);
+state_df <- map_data("state")
+
+choropleth <- merge(county_df, unemp, by = c("state", "county"))
+choropleth <- choropleth[order(choropleth$order), ]
+
+choropleth$rate_d <- cut(choropleth$rate, breaks = c(seq(0, 10, by = 2), 35))
+
+ggplot(choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = rate_d), colour = alpha("white", 1/2), size = 0.2) + 
+  geom_polygon(data = state_df, colour = "white", fill = NA) +
+  scale_fill_brewer(palette = "PuRd")
+
 ```
 
 2. Make a bar chart with sorting.Then we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
 Here comes my barchart.
 
 ![bar](https://cloud.githubusercontent.com/assets/10662777/6846672/63943c26-d396-11e4-99da-41e6c85ac9bf.png)
+
+3. To know more about the trend and compare between years, I use line chart and bar chart.
+
+![cali_line](https://cloud.githubusercontent.com/assets/10662777/7014664/bbfb27e6-dc95-11e4-87f0-20f062218e59.png)
+![rplot_cali](https://cloud.githubusercontent.com/assets/10662777/7014673/d2a45684-dc95-11e4-92d9-d43e229064f3.png)
+
+Here's the R code:
+```
+library(ggplot2)
+library(KernSmooth)
+library(plyr)
+library(scales)
+library(mgcv)
+
+unem_cali <- read.csv(file="/Users/ClaireL/Documents/W4701Visual/Blogcritique/unem_cali.csv",head=TRUE)
+p1 <- qplot(Year, Unemployment_rate, data = unem_cali, geom = c("point","smooth"),method = "gam",formula = y~s(x))
+p2 <-qplot(Year, Unemployment_rate, data = unem_cali, geom = "histogram",stat="identity",binwidth=0.1,fill = Unemployment_rate)
+
+```
+
 
 
 
