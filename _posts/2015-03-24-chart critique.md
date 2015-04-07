@@ -2,7 +2,6 @@
 title: "Bad Chart Critiuqe"
 author: "Claire Liu(yl3296)"
 date: "March 26, 2015"
-output: pdf_document
 ---
 ####Introduction
 This article presents a critique of heatmap, a chart type commonly used to display value by colours,highlighting how they are poorly designed to effectively communicate in the underlying data, and presents a number of more effective alternatives.
