@@ -18,8 +18,8 @@ Here's the original chart
 
 #####What's the problem? 
 
-1. Three colour of legend do not show up at all and one state is in red. Obviosly, the range is unreasonable. Three lables are useless and the remaining four lables are not clear enough to give a distribution of the rate.
-2. Map is good to give a state based picture, but not accurate when we need to compare different states.In this article, the author aimed to know the highest unemployment rate. Generally, we can not get this informaiton by a heatmap.
+1. Three out of the seven colors are not found on the map at all and only one state is in red. Obviosly, the range is unreasonable. Three lables are useless and the remaining four lables are not clear enough to give a distribution of the rate.
+2. Map is good to give a state based picture, but not accurate when we need to compare different states.In this article, the author aimed to know the highest unemployment rate. Generally, we can not get this information by a heatmap.
 3. Look at the dataset. We find Mississippi is not the worst one. Both BLS and Vox omitted the Puerto Rico,  which has the highest unemployment rate 13.1%. Then the conclusion is of course wrong.
 ![image](https://cloud.githubusercontent.com/assets/10662777/6850372/30908190-d3af-11e4-8483-a772997f75a7.png)
 
@@ -28,7 +28,7 @@ Here's the original chart
 ####Let's improve it
 
 
-1. Reset the color range: 1)include all the rate value; 2) every range has values fell in it.  
+1. Reset the color range: 1)include all the rate value; 2) every range has values falling in it.  
 Then I use the most recent data set in Jan 2015 to improve by ggplot. 
 ![rplotmap](https://cloud.githubusercontent.com/assets/10662777/7014656/a10ac9f0-dc95-11e4-9fc0-f6efc9b1dbfe.png)
 
@@ -64,7 +64,7 @@ ggplot(choropleth, aes(long, lat, group = group)) +
 
 ```
 
-2. Make a bar chart with sorting.Then we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
+2. Make a bar chart with sorting.The article in Vox aimed to know where the highest rate lies, then the most straight forward way is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
 Here comes my barchart.
 
 ![bar](https://cloud.githubusercontent.com/assets/10662777/6846672/63943c26-d396-11e4-99da-41e6c85ac9bf.png)
@@ -89,8 +89,8 @@ p2 <-qplot(Year, Unemployment_rate, data = unem_cali, geom = "histogram",stat="i
 ```
 
 ####Some thoughts
-1. Bar chart is an excellent tool to see the maximum, minimum and compare any several classes. It still works when the number of classes is getting large. Just a little less cute.
-2. Heatmap shows its priority with large number of classes. But not so good in comparing.
+1. Bar chart is an excellent tool to see the maximum, minimum and make comparision. It still works when the number of classes is getting large. Just a little less cute.
+2. Heatmap shows its priority with large number of classes. But not so good in comparison.
 3. Heatmap is easily to plot in ggplot, D3 and Excel.
 
 
