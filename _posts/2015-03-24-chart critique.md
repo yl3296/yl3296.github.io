@@ -1,6 +1,6 @@
 ---
 title: "Bad Chart Critiuqe"
-author: "Claire Liu(yl3296)"
+author: "Claire Liu (yl3296)"
 date: "March 26, 2015"
 ---
 ####Introduction
