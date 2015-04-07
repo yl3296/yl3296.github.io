@@ -1,9 +1,9 @@
 
 ---
-layout: post
-title: Bad Chart Critique
+title: "Bad Chart Critiuqe"
+author: "Claire Liu(yl3296)"
+date: "March 26, 2015"
 ---
-
 ####Introduction
 This article presents a critique of heatmap, a chart type commonly used to display value by colours,highlighting how they are poorly designed to effectively communicate in the underlying data, and presents a number of more effective alternatives.
 Basically, heat maps allow users to understand and analyze complex data sets with large number of classes. There can be many ways to display heatmaps, but they all share one thing in common -- they use color to communicate relationships between data values that would be would be much harder to understand if presented numerically in a spreadsheet.
@@ -88,9 +88,6 @@ p1 <- qplot(Year, Unemployment_rate, data = unem_cali, geom = c("point","smooth"
 p2 <-qplot(Year, Unemployment_rate, data = unem_cali, geom = "histogram",stat="identity",binwidth=0.1,fill = Unemployment_rate)
 
 ```
-
-
-
 
 ####Some thoughts
 1. Bar chart is an excellent tool to see the maximum, minimum and compare any several classes. It still works when the number of classes is getting large. Just a little less cute.
