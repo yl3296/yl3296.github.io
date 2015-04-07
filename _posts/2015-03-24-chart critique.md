@@ -69,7 +69,7 @@ Here comes my barchart.
 
 ![bar](https://cloud.githubusercontent.com/assets/10662777/6846672/63943c26-d396-11e4-99da-41e6c85ac9bf.png)
 
-3. To know more about the trend and compare between years, I use line chart and bar chart.
+3. Basically, heatmap can give status at a time point, not a dynamic process. To know more about the trend and compare between years, I use line chart and bar chart.
 
 ![cali_line](https://cloud.githubusercontent.com/assets/10662777/7014664/bbfb27e6-dc95-11e4-87f0-20f062218e59.png)
 ![rplot_cali](https://cloud.githubusercontent.com/assets/10662777/7014673/d2a45684-dc95-11e4-92d9-d43e229064f3.png)
