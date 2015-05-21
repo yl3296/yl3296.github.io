@@ -40,7 +40,9 @@ Here's the original chart
 Then I use the most recent data set in March 2015 to improve by ggplot.
 
 ![final_map](https://cloud.githubusercontent.com/assets/10662777/7759284/1a906c10-ffde-11e4-8a40-ed0ba52af2cc.png)
-Here's the [dataset](https://github.com/yl3296/yl3296.github.io/blob/master/data/data_ggplot.csv) 
+
+Here's the [dataset](https://github.com/yl3296/yl3296.github.io/blob/master/data/data_ggplot.csv)
+
 Here's the R code:
 
 ```
