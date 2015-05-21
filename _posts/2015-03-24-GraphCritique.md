@@ -31,8 +31,12 @@ Here's the original chart
 #####Let's improve it
 
 
-1. Reset the color range: 1)include all the rate value; 2) every range has values falling in it.  
-Then I use the most recent data set in Jan 2015 to improve by ggplot. 
+**1. Reset the color range:**
+1) make sure the color range include all the rate value; 
+2) every range has at least one value falling in it.
+
+Then I use the most recent data set in March 2015 to improve by ggplot.
+
 ![final_map](https://cloud.githubusercontent.com/assets/10662777/7759284/1a906c10-ffde-11e4-8a40-ed0ba52af2cc.png)
 
 
@@ -67,11 +71,29 @@ p1
 write.csv(map_data, file = "map_unem.csv")
 
 ```
-2. Make it iteractive by leafletR.
-  Here's the data set
-  Here's the code :
 
-2. Make a bar chart with sorting.The article in Vox aimed to know where the highest rate lies, then the most straight forward way is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
+2. Make it iteractive by leafletR.
+  Here's the data(https://github.com/yl3296/yl3296.github.io/blob/master/data.csv)
+
+  Here's the code :
+  
+```
+library(ggplot2)
+library(plyr)
+library(maps)
+library(leafletR)
+
+unemp <- read.csv("map_unem.csv", head = TRUE)  
+
+unem_data <- toGeoJSON(data = unemp, dest = tempdir(),name = "Unemployment")
+
+unem_style <- styleGrad(prop="rate", breaks=seq(2, 8, by=1), 
+                     style.val=rev(heat.colors(6)), leg="Unemployment Rate", fill.alpha=0.7)
+popup = c("rate")
+map <- leaflet(data=unem_data, dest = tempdir(), title=" 2015 Unemployment Rate", base.map= "osm", style=unem_style, popup="popup")
+```
+
+3. Make a bar chart with sorting.The article in Vox aimed to know where the highest rate lies, then the most straight forward way is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
 Here comes my barchart.
 
 ![bar](https://cloud.githubusercontent.com/assets/10662777/6846672/63943c26-d396-11e4-99da-41e6c85ac9bf.png)
