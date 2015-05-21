@@ -14,7 +14,7 @@ Source: http://www.vox.com/2014/8/18/6032965/mississippi-unemployment-highest-st
 The following analysis is based on dataset on BLS: http://www.bls.gov/web/laus/laumstrk.htm
 
 Here's the original chart
-![badchart](https://cloud.githubusercontent.com/assets/10662777/6846631/0c197038-d396-11e4-9c60-e0fdc9555562.gif)
+![badchart](https://cloud.githubusercontent.com/assets/10662777/7760126/22aaf12e-ffe6-11e4-9799-ebcf32b11c53.gif)
 
 
 ####What's the problem? 
