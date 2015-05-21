@@ -63,9 +63,13 @@ p1 <- p1 + coord_map()
 p1 <- p1 + geom_text(data = states, aes(x = x, y = y, label = state.abb, group = NULL), size = 2)
 p1 <- p1 + theme_bw()
 p1
-
+# Save the dataset as csv. It will be used in the following interactive map by leafletR.
 write.csv(map_data, file = "map_unem.csv")
+
 ```
+2. Make it iteractive by leafletR.
+  Here's the data set
+  Here's the code :
 
 2. Make a bar chart with sorting.The article in Vox aimed to know where the highest rate lies, then the most straight forward way is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
 Here comes my barchart.
