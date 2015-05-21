@@ -33,37 +33,38 @@ Here's the original chart
 
 1. Reset the color range: 1)include all the rate value; 2) every range has values falling in it.  
 Then I use the most recent data set in Jan 2015 to improve by ggplot. 
-![rplotmap](https://cloud.githubusercontent.com/assets/10662777/7014656/a10ac9f0-dc95-11e4-9fc0-f6efc9b1dbfe.png)
+![final_map](https://cloud.githubusercontent.com/assets/10662777/7759140/f1a5e66e-ffdc-11e4-8a93-b30fddc634ef.png)
+
 
 Here 's the R code:
 
 ```
 library(ggplot2)
-library(scales)
+library(plyr)
 library(maps)
 
-unemp <- read.csv("/Users/ClaireL/Documents/W4701Visual/Blogcritique/unemployment2015.csv", header = F, stringsAsFactors = F)
-names(unemp) <- c("id", "state_fips", "county_fips", "name", "year", 
-                  "?", "?", "?", "rate")
-unemp$county <- tolower(gsub(" County, [A-Z]{2}", "", unemp$name))
-unemp$state <- gsub("^.*([A-Z]{2}).*$", "\\1", unemp$name)
+unemp <- read.csv('unem_rate.csv', head = TRUE)
 
-county_df <- map_data("county")
-names(county_df) <- c("long", "lat", "group", "order", "state_name", "county")
-county_df$state <- state.abb[match(county_df$state_name, tolower(state.name))]
-county_df$state_name <- NULL
+names(unemp) <- c('rank', 'region', 'rate')
+unemp$region <- tolower(unemp$region)
 
-state_df <- map_data("state")
+us_state_map <- map_data('state')
+map_data <- merge(unemp, us_state_map, by = 'region')
 
-choropleth <- merge(county_df, unemp, by = c("state", "county"))
-choropleth <- choropleth[order(choropleth$order), ]
+map_data <- arrange(map_data, order)
 
-choropleth$rate_d <- cut(choropleth$rate, breaks = c(seq(0, 10, by = 2), 35))
+states <- data.frame(state.center, state.abb)
 
-ggplot(choropleth, aes(long, lat, group = group)) +
-  geom_polygon(aes(fill = rate_d), colour = alpha("white", 1/2), size = 0.2) + 
-  geom_polygon(data = state_df, colour = "white", fill = NA) +
-  scale_fill_brewer(palette = "PuRd")
+p1 <- ggplot(data = map_data, aes(x = long, y = lat, group = group))
+p1 <- p1 + geom_polygon(aes(fill = cut_number(rate, 7)))
+p1 <- p1 + geom_path(colour = 'gray', linestyle = 2)
+p1 <- p1 + scale_fill_brewer('Unemployment Rate (Mar 2015)', palette  = 'PuRd')
+p1 <- p1 + coord_map()
+p1 <- p1 + geom_text(data = states, aes(x = x, y = y, label = state.abb, group = NULL), size = 2)
+p1 <- p1 + theme_bw()
+p1
+
+write.csv(map_data, file = "map_unem.csv")
 ```
 
 2. Make a bar chart with sorting.The article in Vox aimed to know where the highest rate lies, then the most straight forward way is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
