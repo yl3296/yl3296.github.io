@@ -110,8 +110,9 @@ In the line chart, we can clearly see the the unemployment rate greatly increase
 In the bar chart, we can see the trend in two elements: hight of the bar and the gradient color. The same conclusion can be get.
 
 
-![cali_line](https://cloud.githubusercontent.com/assets/10662777/7014664/bbfb27e6-dc95-11e4-87f0-20f062218e59.png)
-![rplot_cali](https://cloud.githubusercontent.com/assets/10662777/7014673/d2a45684-dc95-11e4-92d9-d43e229064f3.png)
+![final_line](https://cloud.githubusercontent.com/assets/10662777/7760208/ff81ae44-ffe6-11e4-9c2e-44c740131031.png)
+![final_bar](https://cloud.githubusercontent.com/assets/10662777/7760225/341920e2-ffe7-11e4-98f7-45974eac2386.png)
+
 
 Here's the R code:
 
