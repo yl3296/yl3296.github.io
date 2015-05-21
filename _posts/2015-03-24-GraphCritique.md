@@ -72,7 +72,7 @@ write.csv(map_data, file = "map_unem.csv")
 
 **2. Make it iteractive by leafletR**
 
-  Here's the data(https://github.com/yl3296/yl3296.github.io/blob/master/data.csv)
+  Here's the [data](https://github.com/yl3296/yl3296.github.io/blob/master/data.csv)
 
   Here's the code :
   
