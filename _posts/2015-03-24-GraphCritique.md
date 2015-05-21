@@ -33,7 +33,7 @@ Here's the original chart
 
 1. Reset the color range: 1)include all the rate value; 2) every range has values falling in it.  
 Then I use the most recent data set in Jan 2015 to improve by ggplot. 
-![final_map](https://cloud.githubusercontent.com/assets/10662777/7759140/f1a5e66e-ffdc-11e4-8a93-b30fddc634ef.png)
+![final_map](https://cloud.githubusercontent.com/assets/10662777/7759284/1a906c10-ffde-11e4-8a40-ed0ba52af2cc.png)
 
 
 Here 's the R code:
