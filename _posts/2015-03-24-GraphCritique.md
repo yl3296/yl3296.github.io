@@ -1,13 +1,14 @@
 ---
+layout: post
 title: "Bad Chart Critiuqe"
 author: "Yang(Claire) Liu"
 date: "March 26, 2015"
 ---
-####Introduction
+###Introduction
 This article presents a critique of heatmap, a chart type commonly used to display value by colours,highlighting how they are poorly designed to effectively communicate in the underlying data, and presents a number of more effective alternatives.
 Basically, heat maps allow users to understand and analyze complex data sets with large number of classes. There can be many ways to display heatmaps, but they all share one thing in common -- they use color to communicate relationships between data values that would be would be much harder to understand if presented numerically in a spreadsheet.
 
-####My Bad Chart
+###My Bad Chart
 This map was published by the Bureau of Labor Statistics (BLS), and used in a recent article in Vox. Vox took this map and get the conclusion that Mississippi has the highest unemployment rate. 
 Source: http://www.vox.com/2014/8/18/6032965/mississippi-unemployment-highest-state
 The following analysis is based on dataset on BLS: http://www.bls.gov/web/laus/laumstrk.htm
@@ -16,7 +17,7 @@ Here's the original chart
 ![badchart](https://cloud.githubusercontent.com/assets/10662777/6846631/0c197038-d396-11e4-9c60-e0fdc9555562.gif)
 
 
-#####What's the problem? 
+####What's the problem? 
 
 1. Three out of the seven colors are not found on the map at all and only one state is in red. Obviosly, the range is unreasonable. Three lables are useless and the remaining four lables are not clear enough to give a distribution of the rate.
 2. Map is good to give a state based picture, but not accurate when we need to compare different states.In this article, the author aimed to know the highest unemployment rate. Generally, we can not get this information by a heatmap.
@@ -90,7 +91,7 @@ p2 <-qplot(Year, Unemployment_rate, data = unem_cali, geom = "histogram",stat="i
 
 ```
 
-####Some thoughts
+###Some thoughts
 1. Bar chart is an excellent tool to see the maximum, minimum and make comparision. It still works when the number of classes is getting large. Just a little less cute.
 2. Heatmap shows its priority with large number of classes. But not so good in comparison.
 3. Good tool to plot heatmap: ggplot, D3, Excel; Nice tool to present iteractive maps: leaflet, leafletR, ggmap. 
