@@ -64,7 +64,6 @@ ggplot(choropleth, aes(long, lat, group = group)) +
   geom_polygon(aes(fill = rate_d), colour = alpha("white", 1/2), size = 0.2) + 
   geom_polygon(data = state_df, colour = "white", fill = NA) +
   scale_fill_brewer(palette = "PuRd")
-
 ```
 
 2. Make a bar chart with sorting.The article in Vox aimed to know where the highest rate lies, then the most straight forward way is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
@@ -78,6 +77,7 @@ Here comes my barchart.
 ![rplot_cali](https://cloud.githubusercontent.com/assets/10662777/7014673/d2a45684-dc95-11e4-92d9-d43e229064f3.png)
 
 Here's the R code:
+
 ```
 library(ggplot2)
 library(KernSmooth)
@@ -88,8 +88,8 @@ library(mgcv)
 unem_cali <- read.csv(file="/Users/ClaireL/Documents/W4701Visual/Blogcritique/unem_cali.csv",head=TRUE)
 p1 <- qplot(Year, Unemployment_rate, data = unem_cali, geom = c("point","smooth"),method = "gam",formula = y~s(x))
 p2 <-qplot(Year, Unemployment_rate, data = unem_cali, geom = "histogram",stat="identity",binwidth=0.1,fill = Unemployment_rate)
-
 ```
+
 
 ###Some thoughts
 1. Bar chart is an excellent tool to see the maximum, minimum and make comparision. It still works when the number of classes is getting large. Just a little less cute.
