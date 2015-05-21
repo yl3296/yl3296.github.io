@@ -8,19 +8,9 @@ title: Claire's Blog
 description: Blog Post for EDAV 2015
 logo: "yl3296/yl3296.github.com/image1.png"
 
-
-
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
-#url: "http://yl3296.github.io" 
-
-#
-# This file contains configuration flags to customize your site
-#
-
-
-#
 # Flags below are optional
 #
 
@@ -80,13 +70,4 @@ exclude:
     - LICENSE
     - README.md
     - CNAME
-    
-    
-social:
 
-  - icon:	github
-    url:	https://github.com/yl3296
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
