@@ -75,6 +75,7 @@ write.csv(map_data, file = "map_unem.csv")
 **2. Make it iteractive by leafletR**
 
   Here's the [dataset](https://github.com/yl3296/yl3296.github.io/blob/master/data/data_leaflet.csv)
+  
   Here's the code :
   
 ```
@@ -103,7 +104,9 @@ Here comes my barchart.
 **4. Look at trends by line chart and barchart**
 
 Basically, heatmap shows status at a time point without trend information. To know more about the trend and compare between years, I made the following line chart and bar chart using unemployment rate of California. 
+
 In the line chart, we can clearly see the the unemployment rate greatly increased since 1008 and reached the peak in about 2010. After 2010, it began to gradually decrease but still in a relatively high level. 
+
 In the bar chart, we can see the trend in two elements: hight of the bar and the gradient color. The same conclusion can be get.
 
 
