@@ -19,9 +19,9 @@ Here's the original chart
 
 ####What's the problem? 
 
-1. Three out of the seven colors are not found on the map at all and only one state is in red. Obviosly, the range is unreasonable. Three lables are useless and the remaining four lables are not clear enough to give a distribution of the rate.
-2. Map is good to give a state based picture, but not accurate when we need to compare different states.In this article, the author aimed to know the highest unemployment rate. Generally, we can not get this information by a heatmap.
-3. Look at the dataset. We find Mississippi is not the worst one. Both BLS and Vox omitted the Puerto Rico,  which has the highest unemployment rate 13.1%. Then the conclusion is of course wrong.
+1. Three out of the seven colors are not found on the map at all and only one state is in red. Three lables are useless and the remaining four lables are not clear enough to give a distribution of the rate. In other words, the legend range is unreasonable.
+2. Map is good to give a state based picture, but not accurate when we need to compare different states.In this article, the author aimed to know the highest unemployment rate. Generally, heatmap is not an accuracy way to get this kind of information.
+3. Let's look at the dataset. Obviously, Mississippi is not the worst one. Both BLS and Vox omitted the Puerto Rico,  which has the highest unemployment rate 13.1%. Then the conclusion is of course wrong.
 
 
 ![image](https://cloud.githubusercontent.com/assets/10662777/6850372/30908190-d3af-11e4-8483-a772997f75a7.png)
