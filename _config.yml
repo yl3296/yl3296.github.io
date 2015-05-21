@@ -17,14 +17,6 @@ url: "http://yl3296.github.io"
 # This file contains configuration flags to customize your site
 #
 
-# Name of your site (displayed in the header)
-name: Souploaf
-
-# Short bio or description (displayed in the header)
-description: Soup in loaf form
-
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
 #
 # Flags below are optional
