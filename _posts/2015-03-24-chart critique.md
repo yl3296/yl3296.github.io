@@ -93,7 +93,7 @@ p2 <-qplot(Year, Unemployment_rate, data = unem_cali, geom = "histogram",stat="i
 ####Some thoughts
 1. Bar chart is an excellent tool to see the maximum, minimum and make comparision. It still works when the number of classes is getting large. Just a little less cute.
 2. Heatmap shows its priority with large number of classes. But not so good in comparison.
-3. Heatmap is easily to plot in ggplot, D3 and Excel.
+3. Good tool to plot heatmap : ggplot, D3, Excel; Nice tool to present iteractive maps: leaflet, leafletR, ggmap. 
 
 
 
