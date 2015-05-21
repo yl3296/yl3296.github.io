@@ -105,7 +105,7 @@ Here comes my barchart.
 
 Basically, heatmap shows status at a time point without trend information. To know more about the trend and compare between years, I made the following line chart and bar chart using unemployment rate of California. 
 
-In the line chart, we can clearly see the the unemployment rate greatly increased since 1008 and reached the peak in about 2010. After 2010, it began to gradually decrease but still in a relatively high level. 
+In the line chart, we can clearly see the the unemployment rate greatly increased since 2008 and reached the peak in about 2010. After 2010, it began to gradually decrease but still in a relatively high level. 
 
 In the bar chart, we can see the trend in two elements: hight of the bar and the gradient color. The same conclusion can be get.
 
