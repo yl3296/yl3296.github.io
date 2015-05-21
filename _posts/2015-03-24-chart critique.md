@@ -27,7 +27,7 @@ Here's the original chart
 
 
 
-####Let's improve it
+#####Let's improve it
 
 
 1. Reset the color range: 1)include all the rate value; 2) every range has values falling in it.  
