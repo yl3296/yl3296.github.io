@@ -32,13 +32,14 @@ Here's the original chart
 
 
 **1. Reset the color range:**
+
 1) make sure the color range include all the rate value; 
+
 2) every range has at least one value falling in it.
 
 Then I use the most recent data set in March 2015 to improve by ggplot.
 
 ![final_map](https://cloud.githubusercontent.com/assets/10662777/7759284/1a906c10-ffde-11e4-8a40-ed0ba52af2cc.png)
-
 
 Here 's the R code:
 
@@ -48,15 +49,12 @@ library(plyr)
 library(maps)
 
 unemp <- read.csv('unem_rate.csv', head = TRUE)
-
 names(unemp) <- c('rank', 'region', 'rate')
-unemp$region <- tolower(unemp$region)
 
+unemp$region <- tolower(unemp$region)
 us_state_map <- map_data('state')
 map_data <- merge(unemp, us_state_map, by = 'region')
-
 map_data <- arrange(map_data, order)
-
 states <- data.frame(state.center, state.abb)
 
 p1 <- ggplot(data = map_data, aes(x = long, y = lat, group = group))
@@ -72,7 +70,8 @@ write.csv(map_data, file = "map_unem.csv")
 
 ```
 
-2. Make it iteractive by leafletR.
+**2. Make it iteractive by leafletR**
+
   Here's the data(https://github.com/yl3296/yl3296.github.io/blob/master/data.csv)
 
   Here's the code :
@@ -93,12 +92,16 @@ popup = c("rate")
 map <- leaflet(data=unem_data, dest = tempdir(), title=" 2015 Unemployment Rate", base.map= "osm", style=unem_style, popup="popup")
 ```
 
-3. Make a bar chart with sorting.The article in Vox aimed to know where the highest rate lies, then the most straight forward way is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically,Bar chart is always a better way to show comparation between classes than pie chart.
+**3. Make a bar chart in order to find the state with highest unemployment rate**
+
+One of the goal of the article in Vox is to find the state with highest rate, then the most straight forward method is barchart. By doing it, we can easily  see the maximum, minimum and compare different states. Basically, Bar chart is always a better way to make comparation between classes than pie chart.
 Here comes my barchart.
 
 ![bar](https://cloud.githubusercontent.com/assets/10662777/6846672/63943c26-d396-11e4-99da-41e6c85ac9bf.png)
 
-3. Basically, heatmap can give status at a time point, not a dynamic process. To know more about the trend and compare between years, I use line chart and bar chart.
+**4. Look at trends by line chart and barchart**
+
+Basically, heatmap shows status at a time point without trend information. To know more about the trend and compare between years, I made the following line chart and bar chart.
 
 ![cali_line](https://cloud.githubusercontent.com/assets/10662777/7014664/bbfb27e6-dc95-11e4-87f0-20f062218e59.png)
 ![rplot_cali](https://cloud.githubusercontent.com/assets/10662777/7014673/d2a45684-dc95-11e4-92d9-d43e229064f3.png)
@@ -118,9 +121,9 @@ p2 <-qplot(Year, Unemployment_rate, data = unem_cali, geom = "histogram",stat="i
 ```
 
 ###Some thoughts
-1. Bar chart is an excellent tool to see the maximum, minimum and make comparision. It still works when the number of classes is getting large. Just a little less cute.
-2. Heatmap shows its priority with large number of classes. But not so good in comparison.
-3. Good tool to plot heatmap: ggplot, D3, Excel; Nice tool to present iteractive maps: leaflet, leafletR, ggmap. 
+1. Bar chart is an excellent tool to see the maximum, minimum and make comparision. It still works when the number of classes is getting large. But a little less cute.
+2. Heatmap shows its priority with large number of classes. 
+3. Nice tools for heatmap: ggplot; Nice tool to present iteractive maps: leaflet, leafletR, ggmap and rMaps.
 
 
 
